@@ -21,17 +21,19 @@ public class Flip : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            flip();
+
+            OnMouseDown();
 
         }
+        
     }
 
 
+    //public void flip()
 
-    public void flip()
-
+     public void OnMouseDown()
 
     {  // if its true its false, if its false its true
 
@@ -53,4 +55,7 @@ public class Flip : MonoBehaviour
         }
 
     }
+
+    
+
 }
