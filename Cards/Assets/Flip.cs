@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Flip : MonoBehaviour
 {
-    
+
     public GameObject CardBack;
     public bool cardBackisActive;
- 
+
 
     // Start is called before the first frame update
     void Start()
     {
-        //cardBackisActive = false;
 
     }
 
@@ -23,39 +22,35 @@ public class Flip : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-
+           
             OnMouseDown();
-
         }
-        
-    }
 
 
-  
+         void OnMouseDown()
 
-     public void OnMouseDown()
-
-    {  
-
-        cardBackisActive = !cardBackisActive;
-
-        if (cardBackisActive)
         {
-            CardBack.SetActive(true);
-            
+
+            cardBackisActive = !cardBackisActive;
+
+            if (cardBackisActive)
+            {
+                CardBack.SetActive(true);
+
+
+            }
+
+            else
+            {
+
+                CardBack.SetActive(false);
+
+
+            }
 
         }
 
-        else
-        {
-            
-            CardBack.SetActive(false);
 
-
-        }
 
     }
-
-    
-
 }
