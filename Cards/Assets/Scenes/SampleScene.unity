@@ -618,7 +618,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CardBack: {fileID: 1476523029}
   cardBackisActive: 1
-  CardOne: {fileID: 754049356}
 --- !u!1 &1026254319
 GameObject:
   m_ObjectHideFlags: 0

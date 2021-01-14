@@ -7,12 +7,12 @@ public class Flip : MonoBehaviour
     
     public GameObject CardBack;
     public bool cardBackisActive;
-    public GameObject CardOne;
+ 
 
     // Start is called before the first frame update
     void Start()
     {
-      
+        cardBackisActive = false;
 
     }
 
@@ -25,30 +25,31 @@ public class Flip : MonoBehaviour
         {
             flip();
 
-
         }
     }
+
 
 
     public void flip()
 
 
-    {
+    {  // if its true its false, if its false its true
+
+        cardBackisActive = !cardBackisActive;
 
         if (cardBackisActive)
         {
             CardBack.SetActive(true);
-           
+            
 
         }
 
         else
         {
             
-            CardOne.SetActive(true);
             CardBack.SetActive(false);
 
-           
+
         }
 
     }
