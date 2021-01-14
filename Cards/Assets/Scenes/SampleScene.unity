@@ -616,14 +616,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f21c577be33f4800a2b2f720cb9ac27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 0
-  y: 1
-  z: 0
   CardBack: {fileID: 1476523029}
-  cardBackisActive: 0
-  timer: 0
+  cardBackisActive: 1
   CardOne: {fileID: 754049356}
-  cardnotActive: 0
 --- !u!1 &1026254319
 GameObject:
   m_ObjectHideFlags: 0

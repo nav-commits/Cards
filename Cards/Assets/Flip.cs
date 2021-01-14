@@ -5,16 +5,15 @@ using UnityEngine;
 public class Flip : MonoBehaviour
 {
     
-    public float x, y, z;
     public GameObject CardBack;
     public bool cardBackisActive;
-    public int timer;
-   
+    public GameObject CardOne;
 
     // Start is called before the first frame update
     void Start()
     {
-        cardBackisActive = false;
+      
+
     }
 
     // Update is called once per frame
@@ -24,59 +23,33 @@ public class Flip : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
+            flip();
 
-            Startflip();
+
         }
     }
 
-
-    public void Startflip()
-
-    {
-        StartCoroutine(CalculatedFlip());
-
-    }
 
     public void flip()
 
+
     {
 
-        if (cardBackisActive == true)
+        if (cardBackisActive)
         {
-            CardBack.SetActive(false); 
-            cardBackisActive = false; 
+            CardBack.SetActive(true);
            
-        }
 
+        }
 
         else
         {
-            CardBack.SetActive(true);
-            cardBackisActive = true; 
+            
+            CardOne.SetActive(true);
+            CardBack.SetActive(false);
+
+           
         }
-
-
-
-
-    }
-
-    IEnumerator CalculatedFlip()
-
-    {
-        for (int i = 0; i < 180; i++)
-        {
-            yield return new WaitForSeconds(0.02f);
-            transform.Rotate(new Vector3(x, y)); //x y z
-            timer++;
-
-            if (timer == 60 || timer == -60)
-            {
-                flip();
-            }
-
-        }
-
-        timer = 0;
 
     }
 }
