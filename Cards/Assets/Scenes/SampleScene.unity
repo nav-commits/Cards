@@ -622,6 +622,8 @@ MonoBehaviour:
   CardBack: {fileID: 1476523029}
   cardBackisActive: 0
   timer: 0
+  CardOne: {fileID: 754049356}
+  cardnotActive: 0
 --- !u!1 &1026254319
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1476523030
 RectTransform:
   m_ObjectHideFlags: 0
