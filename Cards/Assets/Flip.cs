@@ -12,7 +12,7 @@ public class Flip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cardBackisActive = false;
+        //cardBackisActive = false;
 
     }
 
