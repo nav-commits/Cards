@@ -31,11 +31,11 @@ public class Flip : MonoBehaviour
     }
 
 
-    //public void flip()
+  
 
      public void OnMouseDown()
 
-    {  // if its true its false, if its false its true
+    {  
 
         cardBackisActive = !cardBackisActive;
 
