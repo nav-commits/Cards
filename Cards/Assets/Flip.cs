@@ -1,19 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Flip : MonoBehaviour
 {
 
     public GameObject CardBack;
     public bool cardBackisActive;
-
-
+   
     // Start is called before the first frame update
     void Start()
-
-    {
         
+    {
+       
     }
 
     // Update is called once per frame
@@ -21,33 +21,41 @@ public class Flip : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
 
         {
             OnMouseDown();
         }
 
+
+
     }
 
-    void OnMouseDown()
+
+
+    private void OnMouseDown()
 
     {
 
-        cardBackisActive = !cardBackisActive;
-
-        if (cardBackisActive)
-        {
-            CardBack.SetActive(true);
+        
+            cardBackisActive = !cardBackisActive;
 
 
-        }
+            if (cardBackisActive)
 
-        else
+            {
+                CardBack.SetActive(true);
 
-        {
-            CardBack.SetActive(false);
+            }
 
-        }
+            else
+
+            {
+                CardBack.SetActive(false);
+  
+
+            }
 
     }
 }
