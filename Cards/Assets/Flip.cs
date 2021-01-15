@@ -11,8 +11,9 @@ public class Flip : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
 
+    {
+        
     }
 
     // Update is called once per frame
@@ -21,38 +22,32 @@ public class Flip : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
+
         {
-           
             OnMouseDown();
         }
 
+    }
 
+    void OnMouseDown()
 
+    {
 
-         void OnMouseDown()
+        cardBackisActive = !cardBackisActive;
 
+        if (cardBackisActive)
         {
+            CardBack.SetActive(true);
 
-            cardBackisActive = !cardBackisActive;
-
-            if (cardBackisActive)
-            {
-                CardBack.SetActive(true);
-
-
-            }
-
-            else
-            {
-
-                CardBack.SetActive(false);
-
-
-            }
 
         }
 
+        else
 
+        {
+            CardBack.SetActive(false);
+
+        }
 
     }
 }
