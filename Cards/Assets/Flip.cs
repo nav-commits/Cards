@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Flip : MonoBehaviour
+public class Flip : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler
 {
 
     public GameObject CardBack;
     public bool cardBackisActive;
-   
-   
+    public bool MouseOnObject = false;
+
+
+
     // Start is called before the first frame update
     void Start()
         
     {
-       
-    }
 
+
+    }
 
     // Update is called once per frame
 
@@ -24,15 +26,25 @@ public class Flip : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && (!MouseOnObject))
 
         {
             OnMouseDown();
-        }
+            
 
+        }
 
     }
 
+    public void OnPointerEnter(PointerEventData pointerEventData)
+    {
+        MouseOnObject = false;
+
+    }
+    public void OnPointerExit(PointerEventData pointerEventData)
+    {
+        MouseOnObject = true;
+    }
 
 
 
@@ -60,3 +72,6 @@ public class Flip : MonoBehaviour
 
     }
 }
+
+
+
